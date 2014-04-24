@@ -3,7 +3,8 @@
   "dependencies": {
     "basePackages": {
       "iron-router": {},
-      "bootstrap-flatly": {}
+      "bootstrap-flatly": {},
+      "momentjs": {}
     },
     "packages": {
       "iron-router": {
@@ -13,8 +14,13 @@
       },
       "bootstrap-flatly": {
         "git": "https://github.com/grokbot/meteor-bootstrap-flatly.git",
-        "tag": "v0.0.3",
-        "commit": "ca8eb1730f1090b8d6e0db75efbe566a2ff27ee7"
+        "tag": "v0.0.4",
+        "commit": "53dcf5c4aad152e9b88dcc0f8d1dfbb1985200d7"
+      },
+      "momentjs": {
+        "git": "https://github.com/crapthings/meteor-momentjs.git",
+        "tag": "v2.1.0.2",
+        "commit": "59a762e297082eea8b8cae00374c2b7ac6f89529"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

@@ -10,4 +10,17 @@ Meteor.methods({
   *  }
   *
   */
+
+  '/app/matches/create': function (match) {
+    if (match.name === '') {
+      throw new Meteor.Error(401, "Opponent is required"); 
+    }
+
+    if (match.date === '') {
+      throw new Meteor.Error(401, "Date is required"); 
+    }
+
+    return Matches.insert(match);
+  }
+
 });

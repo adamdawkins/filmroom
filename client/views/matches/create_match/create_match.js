@@ -7,9 +7,16 @@ Template.CreateMatch.events({
       name: $('#match_opponent').val(),
       date: $('#match_date').val()
     }
-    Matches.insert(match);
+
+    Meteor.call('/app/matches/create', match, function (err, matchId) {
+      if (err) {
+       console.log(err);
+      } else {
+        Router.go('matches.index');
+      }
+    });
+
     e.preventDefault();
-    Router.go('matches.index');
   }
 });
 

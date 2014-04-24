@@ -1,6 +1,9 @@
 <template name="MatchesIndex">
+  <div class="list-group">
   {{#each matches}}  
-    {{name}}
+    hello
+   {{>MatchListItem}}
   {{/each}}
+</div>
   <a href="{{pathFor 'create.match'}}" class="btn btn-default">Add new match</a>
 </template>
