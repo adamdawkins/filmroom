@@ -2,12 +2,6 @@
 /* CreateMatch: Event Handlers and Helpers */
 /*****************************************************************************/
 Template.CreateMatch.events({
-  /*
-   * Example: 
-   *  'click .selector': function (e, tmpl) {
-   *
-   *  }
-   */
   'submit #create_match_form': function (e, tmpl) {
     var match = {
       name: $('#match_opponent').val(),
@@ -15,6 +9,7 @@ Template.CreateMatch.events({
     }
     Matches.insert(match);
     e.preventDefault();
+    Router.go('matches.index');
   }
 });
 

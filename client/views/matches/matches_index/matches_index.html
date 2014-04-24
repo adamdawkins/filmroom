@@ -1,3 +1,6 @@
 <template name="MatchesIndex">
-  client/views/matches/matches_index/matches_index.html
+  {{#each matches}}  
+    {{name}}
+  {{/each}}
+  <a href="{{pathFor 'create.match'}}" class="btn btn-default">Add new match</a>
 </template>
