@@ -8,6 +8,21 @@ Template.CreateClip.events({
    *
    *  }
    */
+  'submit form': function (e, tmpl) {
+    e.preventDefault();
+    var clip = {
+      name: $("#clip_name").val(),
+      matchId: this._id
+    };
+    
+    if(clip.name !== "") {
+      var clipId = Clips.insert(clip);
+      Matches.update({_id: this._id}, {
+        $addToSet: { clips: {_id: clipId, name: clip.name} }
+      });
+    }
+
+  }
 });
 
 Template.CreateClip.helpers({

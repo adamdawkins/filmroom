@@ -1,0 +1,13 @@
+<template name="ShowMatch">
+<div class="container">
+  {{#with match}}
+  <h1>{{name}}</h1>
+  <ul>
+    {{#each clips}}
+    <li>{{name}}</li>
+    {{/each}}
+  </ul>
+  {{>CreateClip}}
+  {{/with}}
+</div>
+</template>

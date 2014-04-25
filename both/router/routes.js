@@ -18,4 +18,6 @@ Router.map(function () {
   this.route('create.clip', {path: '/clips/new'});
   this.route('matches.index', {path: '/'});
   this.route('create.match', {path: '/matches/new'});
+  this.route('show.match', {path: '/matches/:_id'});
+  this.route('players.index', {path: '/players'});
 });

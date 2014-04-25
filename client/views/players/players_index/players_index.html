@@ -1,0 +1,13 @@
+<template name="PlayersIndex">
+<div class="container">
+  <h1>Players
+    <small>{{count}}</small> 
+  </h1>
+
+  <ul>
+    {{#each players}}
+    <li>#{{number}} - {{first_name}} {{last_name}}</li>
+    {{/each}}
+  </ul>
+</div>
+</template>
